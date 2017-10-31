@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Technology - BBC News</title>
+        <style type="text/css">
+            #topbar{
+                height:40px;
+                width:1000px;
+                margin:0 auto;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                font-family: Helvetica, Arial, sans-serif;
+            }
+            #logo{
+                width:100px;
+                margin:5px;
+                float:left;
+            }
+            .topbar-section{
+                height: 100%;
+                border-left: 1px #CCCCCC solid;
+                float:left;
+            }
+            #signIn-Image{
+                width:25px;
+                margin: 11px 15px;
+                float:left;
+            }
+            #signIn-text{
+                font-weight: bold;
+                font-size: 90%;
+                position: relative;
+                top: 14px;
+                padding-right: 50px;
+            }
+            #wigglyLine{
+                height: 40px;
+                float: left;
+            }
+            #bell-div{
+                float: left;
+            }
+            #bell{
+                height: 25px;
+                margin: 9px 8px 0 8px;
+            }
+            .topbar-menu{
+                font-size: 90%;
+                font-weight: bold;
+                padding: 13px 15px 0 15px;
+                height:27px;
+                float: left;
+            }
+            #more-arrow{
+                width: 16px;
+                margin-left: 20px;
+            }
+            #search-box{
+                font-weight: bold;
+                font-size: 14px;
+                background-color: #E4E4E4;
+                border:none;
+                margin:5px 0 5px 5px;
+                width: 90px;
+                padding: 5px;
+                float: left;
+            }
+            #magnify-glass{
+                height: 27px;
+                margin-top:5px;
+            }
+            .clear{
+                clear:both;
+            }
+            #menu-bar-container{
+                border-top:1px solid #CCCCCC;
+                background-color: #B91C21;
+                width:100%;
+                height:70px;
+            }
+            #menu-bar{
+                width:1000px;
+                margin:0 auto;
+            }
+            h1{
+                font-size: 40px;
+                font-weight: normal;
+                padding:0;
+                margin:0 auto;
+                padding-top: 10px;
+                color: white;
+            }
+            #menu-bar-down-container{
+                background-color: #A71A1E;
+                height: 40px;
+            }
+            #menu-bar-down{
+                width:1000px;
+                margin:0 auto;
+            }
+            #menu-bar-down a{
+                color: white;
+                font-size: 15px;
+                border-right: 1px #BB4545 solid;
+                text-decoration: none;
+                margin-top: 5px;
+                padding: 0 10px;
+                position:relative;
+                top:10px;
+            }
+            #menu-bar-down a:hover{
+                text-decoration: underline;
+            }
+            .noBorder{
+                border: none !important;
+            }
+            #noLeft{
+                padding-left: 0 !important;
+            }
+            #down-arrow{
+                height: 15px;
+                position: relative;
+                top:13px;
+            }
+            #page-container{
+                width:1000px;
+                margin:0 auto;
+            }
+            h2{
+                font-weight: normal;
+                font-size: 20px;
+                width:105px;
+                margin-top: 30px;
+                border-bottom: 3px #A91717 solid;
+            }
+            h3 a{
+                color: black;
+                font-size: 30px;
+                text-decoration: none;
+            }
+            h3 a:hover{
+                color: #1167A8
+            }
+            #article-container{
+                width:650px;
+                float: left;
+                border-right: 1px #CCCCCC solid;
+                padding-right: 15px;
+            }
+            #article-summary{
+                color: #686868;
+                width:250px;
+                float:left;
+                margin: 0;
+            }
+            .clock{
+                height:15px;
+                padding-right: 5px;
+                float: left;
+                position: relative;
+                top: -9px;
+            }
+            .topic-link{
+                font-size: 14px;
+                color: #A41D21;
+                text-decoration: none;
+                border-left: 1px #CCCCCC solid;
+                padding-left: 10px;
+                position: relative;
+                top:-10px;
+                margin-bottom: 0;
+            }
+            #article-summary a:hover{
+                color: #1167A8;
+            }
+            #article-image{
+                width:400px;
+                float: right;
+            }
+            #article-hr{
+                border-top: 1px #A41D21 solid;
+                width:50px;
+            }
+            #article-link{
+                color: black;
+                text-decoration: none;
+            }
+            #watch-container{
+                padding-left: 10px;
+                width:320px;
+                float: left;
+            }
+            h4{
+                font-size: 23px;
+                font-weight:normal;
+                margin: 0 0 5px 5px;
+            }
+            .watch-container-link{
+                color:black;
+                font-weight: bold;
+                font-size: 16px;
+                text-decoration: none;
+            }
+            .watch-container-link:hover{
+                color:#1167A8;
+            }
+            .article-side-image{
+                width:110px;
+                float: left;
+                margin:12px 5px;
+            }
+            .date{
+                font-size: 14px;
+                padding-right: 5px;
+                float: left;
+                position: relative;
+                top:-10px;
+            }
+            .side-article{
+                width:200px;
+                position:relative;
+                top:-5px;
+                float: right;
+            }
+        </style>
+            
+    </head>
+    <body>
+        <div id="topbar">
+            <img id="logo" src="bbc-logo.png">
+            <div id="signIn-div" class="topbar-section">
+                <img src="signInImage.png" id="signIn-Image">
+                <span id="signIn-text">Sign in</span>
+            </div>
+            <div id="bell-div">
+                <img src="wigglyline.png" id="wigglyLine">
+                <img src="bell.png" id="bell">
+            </div>
+            <div class="topbar-section topbar-menu">
+                News
+            </div>
+            <div class="topbar-section topbar-menu">
+                Sports
+            </div>
+            <div class="topbar-section topbar-menu">
+                Weather
+            </div>
+            <div class="topbar-section topbar-menu">
+                Shop
+            </div>
+            <div class="topbar-section topbar-menu">
+                Earth
+            </div>
+            <div class="topbar-section topbar-menu">
+                Travel
+            </div>
+            <div class="topbar-section topbar-menu">
+                More
+                <img src="more-arrow.png" id="more-arrow">
+            </div>
+            <div class="topbar-section">
+                <input type="text" id="search-box" placeholder="search">
+                <input type="image" src="magnifying-glass.png" id="magnify-glass">
+            </div>
+        </div>
+        
+        <div id="menu-bar-container">
+            
+            <div id="menu-bar">
+                <h1>NEWS</h1>
+            </div>
+            <div id="menu-bar-down-container">
+                <div id="menu-bar-down">
+                    <a href="" id="noLeft">Home</a>
+                    <a href="">Video</a>
+                    <a href="">World</a>
+                    <a href="">US & Canada</a>
+                    <a href="">UK</a>
+                    <a href="">Business</a>
+                    <a href="">Tech</a>
+                    <a href="">Science</a>
+                    <a href="">Magazine</a>
+                    <a href="">Entertainment & Arts</a>
+                    <a href="">Health</a>
+                    <a href="" class="noBorder">More</a>
+                    <img src="down-arrow.png" id="down-arrow">
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="page-container">
+            <div id="main-article">
+                <h2>Technology</h2>
+                <div id="article-container">
+                    <h3><a href="">North Korean hackers hit UK TV company</a></h3>
+                    <div id="article-summary">
+                        <p>The TV series Opposite Number was cancelled following a cyber-attack in 2014.</p>
+                        <p><img src="clock.png" class="clock"><span class="date">9 hours ago</span><a href="" class="topic-link">Technology</a></p>
+                        <hr id="article-hr" align="left">
+                        <p><a href="" id="article-link">N Korea 'hacks US-S Korea war plan'</a></p>
+                    </div>
+                    <img src="Article-image.png" id="article-image">
+                </div>
+                
+            </div>
+            <div id="watch-container">
+                <h4>Watch/Listen</h4>
+                <img src="wifi.png" class="article-side-image">
+                <div class="side-article">
+                    <p><a href="" class="watch-container-link">Wi-fi security flaw Krack explained</a></p>
+                    <p><img src="clock.png" class="clock"><span class="date">16 Octobor 2017</span></p>
+                </div>
+                <div class="clear"></div>
+                <img src="girl.png" class="article-side-image">
+                <div class="side-article">
+                    <p><a href="" class="watch-container-link">How a girl who cannot speak got a unique voice</a></p>
+                    <p><img src="clock.png" class="clock"><span class="date">16 Octobor 2017</span><a href="" class="topic-link">Magazine</a></p>
+                </div>
+                <div class="clear"></div>
+                <img src="tabletennis.png" class="article-side-image">
+                <div class="side-article">
+                    <p><a href="" class="watch-container-link">Table tennis playing robot v BBC presenter</a></p>
+                    <p><img src="clock.png" class="clock"><span class="date">16 Octobor 2017</span><a href="" class="topic-link">Technology</a></p>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
