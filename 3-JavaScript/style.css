@@ -1,0 +1,14 @@
+            body{
+                font-family: fantasy
+            }
+            #time{
+                font-weight: bold;
+                font-size: 20px;
+            }
+            #shape{
+                display: none;
+                height:200px;
+                width: 200px;
+                background-color: red;
+                position:relative;
+            }
